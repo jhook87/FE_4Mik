@@ -65,7 +65,14 @@ export default function ActFour() {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="group relative px-8 py-4 bg-overmatch text-carbon-900 font-hud font-bold text-xl rounded hover:bg-verified transition-all duration-300 transform hover:scale-105">
+          <button 
+            className="group relative px-8 py-4 bg-overmatch text-carbon-900 font-hud font-bold text-xl rounded hover:bg-verified transition-all duration-300 transform hover:scale-105"
+            onClick={() => {
+              // This would typically link to a contact form or scheduling system
+              window.location.href = 'mailto:contact@4mik.com?subject=Classified%20Briefing%20Request';
+            }}
+            aria-label="Request classified briefing and establish contact with 4MIK team"
+          >
             <span className="relative z-10">ESTABLISH CONTACT</span>
             <div className="absolute inset-0 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-overmatch to-verified blur-xl"></div>
           </button>

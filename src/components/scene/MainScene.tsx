@@ -156,6 +156,35 @@ function ParticleSystem({ scrollProgress }: ParticleSystemProps) {
 function VineLines({ scrollProgress }: { scrollProgress: number }) {
   const linesRef = useRef<THREE.Group>(null);
 
+  // Use memoized random positions to avoid re-rendering with different positions
+  const linePositions = useMemo(() => {
+    const lineCount = 20;
+    const gridSize = 8;
+    const spacing = 1.5;
+    const positions = [];
+
+    // Use seeded random for consistent positions
+    let seed = 54321;
+    const seededRandom = () => {
+      seed = (seed * 9301 + 49297) % 233280;
+      return seed / 233280;
+    };
+
+    for (let i = 0; i < lineCount; i++) {
+      const startX = (seededRandom() * gridSize - gridSize / 2) * spacing;
+      const startY = (seededRandom() * gridSize - gridSize / 2) * spacing;
+      const startZ = (seededRandom() * gridSize - gridSize / 2) * spacing;
+
+      const endX = (seededRandom() * gridSize - gridSize / 2) * spacing;
+      const endY = (seededRandom() * gridSize - gridSize / 2) * spacing;
+      const endZ = (seededRandom() * gridSize - gridSize / 2) * spacing;
+
+      positions.push({ start: [startX, startY, startZ], end: [endX, endY, endZ] });
+    }
+
+    return positions;
+  }, []);
+
   useEffect(() => {
     if (!linesRef.current) return;
 
@@ -166,22 +195,11 @@ function VineLines({ scrollProgress }: { scrollProgress: number }) {
 
     // Only show lines in Act II when grid is forming
     if (scrollProgress >= 0.25 && scrollProgress < 0.5) {
-      const lineCount = 20;
-      const gridSize = 8;
-      const spacing = 1.5;
-
-      for (let i = 0; i < lineCount; i++) {
-        const points = [];
-        const startX = (Math.random() * gridSize - gridSize / 2) * spacing;
-        const startY = (Math.random() * gridSize - gridSize / 2) * spacing;
-        const startZ = (Math.random() * gridSize - gridSize / 2) * spacing;
-
-        const endX = (Math.random() * gridSize - gridSize / 2) * spacing;
-        const endY = (Math.random() * gridSize - gridSize / 2) * spacing;
-        const endZ = (Math.random() * gridSize - gridSize / 2) * spacing;
-
-        points.push(new THREE.Vector3(startX, startY, startZ));
-        points.push(new THREE.Vector3(endX, endY, endZ));
+      linePositions.forEach(({ start, end }) => {
+        const points = [
+          new THREE.Vector3(start[0], start[1], start[2]),
+          new THREE.Vector3(end[0], end[1], end[2])
+        ];
 
         const geometry = new THREE.BufferGeometry().setFromPoints(points);
         const material = new THREE.LineBasicMaterial({
@@ -190,10 +208,10 @@ function VineLines({ scrollProgress }: { scrollProgress: number }) {
           transparent: true,
         });
         const line = new THREE.Line(geometry, material);
-        linesRef.current.add(line);
-      }
+        linesRef.current?.add(line);
+      });
     }
-  }, [scrollProgress]);
+  }, [scrollProgress, linePositions]);
 
   return <group ref={linesRef} />;
 }

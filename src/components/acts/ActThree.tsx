@@ -31,17 +31,18 @@ function ActThreeContent({ explodeProgress }: ActThreeContentProps) {
       <div className="w-full md:w-1/2 max-w-xl z-10">
         <div className="glass-panel rounded-lg p-8 md:p-10">
           <h2 className="text-4xl md:text-6xl font-hud font-bold mb-6 text-overmatch glow-cyan">
-            RETROFIT THE FLEET.
+            OUR SOLUTIONS
           </h2>
           
           <p className="text-lg md:text-xl font-body text-tungsten mb-6 leading-relaxed">
-            <span className="text-verified font-semibold">Zero latency.</span> Drop-in integration 
-            with existing systems. No rip-and-replace.
+            We provide <span className="text-verified font-semibold">drop-in firmware</span> and 
+            software integration for existing hardware platforms—no rip-and-replace required.
           </p>
 
           <p className="text-base text-tungsten/80 font-body mb-8">
-            From ISR platforms to naval vessels, from ground vehicles to tactical networks—4MIK 
-            firmware turns legacy hardware into trusted nodes in seconds.
+            From ISR and reconnaissance systems to maritime navigation, autonomous platforms, 
+            and tactical networks—4MIK enables trust and verification at scale across 
+            defense, intelligence, and commercial applications.
           </p>
 
           {/* Spec badges */}

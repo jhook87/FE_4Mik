@@ -6,18 +6,18 @@ export default function ActOne() {
       <div className="max-w-4xl mx-auto text-center z-10">
         <h1 
           className="text-6xl md:text-8xl font-hud font-bold mb-8 glitch-text glow-cyan"
-          data-text="THE FOG OF WAR HAS DIGITIZED."
+          data-text="TRUST IN CONTESTED ENVIRONMENTS."
         >
-          THE FOG OF WAR HAS DIGITIZED.
+          TRUST IN CONTESTED ENVIRONMENTS.
         </h1>
         
         <p className="text-xl md:text-2xl font-body text-tungsten/80 mb-4">
-          SPOOFING. JAMMING. DEEPFAKES.
+          4MIK delivers cryptographic verification at the edge.
         </p>
         
         <p className="text-lg md:text-xl font-body text-tungsten/60 max-w-2xl mx-auto">
-          In contested environments, you can&apos;t trust what you see, hear, or receive. 
-          The adversary controls the narrative.
+          We build firmware and software solutions that establish unbreakable chains 
+          of custody for mission-critical data—from capture to command.
         </p>
       </div>
 

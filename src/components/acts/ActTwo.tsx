@@ -6,18 +6,20 @@ export default function ActTwo() {
       <div className="max-w-4xl mx-auto z-10">
         <div className="glass-panel rounded-lg p-8 md:p-12">
           <h2 className="text-5xl md:text-7xl font-hud font-bold mb-6 text-overmatch glow-cyan">
-            TRUST AT THE EDGE.
+            OUR TECHNOLOGY
           </h2>
           
           <p className="text-xl md:text-2xl font-body text-tungsten mb-8 leading-relaxed">
-            MerkleVining™ creates an <span className="text-verified font-semibold">unbreakable chain of custody</span> from 
-            the moment data is captured. No cloud. No latency. No compromise.
+            MerkleVining™ is our proprietary cryptographic protocol that creates an 
+            <span className="text-verified font-semibold"> unbreakable chain of custody</span> from 
+            the moment data is captured—with zero latency and no cloud dependency.
           </p>
 
           <div className="space-y-6">
             <p className="text-lg text-tungsten/80 font-body">
-              Every sensor reading, every image, every tactical decision is cryptographically anchored 
-              in real-time. Tamper-proof. Verifiable. Even in denied environments.
+              We enable defense, government, and commercial organizations to verify the authenticity 
+              of sensor data, communications, and digital intelligence in real-time—even in 
+              denied, degraded, or contested environments.
             </p>
 
             {/* Process steps */}

@@ -4,23 +4,23 @@ export default function ActFour() {
   const team = [
     {
       name: 'Yazan',
-      title: 'Infrastructure Guru',
-      description: 'Scaled deep-tech from zero to deployment.',
+      title: 'Co-Founder & CTO',
+      description: 'Deep-tech infrastructure expert. Built scalable systems from concept to deployment.',
     },
     {
       name: 'John',
-      title: 'Silicon Valley Builder',
-      description: 'Shipping frontier systems at scale.',
+      title: 'Co-Founder & CEO',
+      description: 'Silicon Valley veteran. Brings frontier technology to market at scale.',
     },
     {
       name: 'Justin',
-      title: 'JSOC / CIA Veteran',
-      description: 'Built for contested truth.',
+      title: 'Co-Founder & Chief Security Officer',
+      description: 'JSOC / CIA background. Architecting solutions for high-stakes environments.',
     },
     {
       name: 'Zach',
-      title: 'Navy SWCC',
-      description: 'Implemented mesh networks under fire.',
+      title: 'Co-Founder & VP Engineering',
+      description: 'Navy SWCC. Field-tested networking and communications systems.',
     },
   ];
 
@@ -29,10 +29,11 @@ export default function ActFour() {
       <div className="max-w-6xl mx-auto z-10 w-full">
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-7xl font-hud font-bold mb-6 text-tungsten">
-            THE OPERATORS
+            OUR TEAM
           </h2>
           <p className="text-xl md:text-2xl font-body text-tungsten/80 max-w-3xl mx-auto">
-            Built by veterans and technologists who understand what&apos;s at stake.
+            Founded by veterans and technologists with deep expertise in defense, 
+            intelligence, and distributed systems.
           </p>
         </div>
 
@@ -69,15 +70,15 @@ export default function ActFour() {
             className="group relative px-8 py-4 bg-overmatch text-carbon-900 font-hud font-bold text-xl rounded hover:bg-verified transition-all duration-300 transform hover:scale-105"
             onClick={() => {
               // This would typically link to a contact form or scheduling system
-              window.location.href = 'mailto:contact@4mik.com?subject=Classified%20Briefing%20Request';
+              window.location.href = 'mailto:contact@4mik.com?subject=Partnership%20Inquiry';
             }}
-            aria-label="Request classified briefing and establish contact with 4MIK team"
+            aria-label="Contact 4MIK team for partnership opportunities"
           >
-            <span className="relative z-10">ESTABLISH CONTACT</span>
+            <span className="relative z-10">GET IN TOUCH</span>
             <div className="absolute inset-0 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-overmatch to-verified blur-xl"></div>
           </button>
           <p className="mt-4 text-sm font-mono text-tungsten/60">
-            CLASSIFIED BRIEFINGS AVAILABLE FOR QUALIFIED OPERATORS
+            PARTNERING WITH DEFENSE, GOVERNMENT, AND ENTERPRISE ORGANIZATIONS
           </p>
         </div>
       </div>
